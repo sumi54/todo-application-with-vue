@@ -11,12 +11,14 @@ body{
 }
 
 #app {
+  display: block;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #f1f2f6;
   max-width: 800px;
+  width: 500px;
   margin: 0 auto;
 }
 </style>

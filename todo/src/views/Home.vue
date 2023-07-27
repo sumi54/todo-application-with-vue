@@ -2,17 +2,21 @@
   <div class="home">
     <div v-if="yapilacaklar.length">
       <div v-for="yap in yapilacaklar" :key="yap.id">
-        <p>{{ yap.baslik }}</p>
-      </div>
+        <yapilacak :yapilacak="yap"/>
+        </div>
     </div>
     <div v-else>
       <p>Yapılacaklar Yükleniyor..</p>
     </div>
-  </div>
+    </div>
 </template>
 <script>
+import yapilacak from "../components/Yapılacak.vue"
 export default{
   name:'Home',
+  components:{
+    yapilacak
+  },
   data(){
     return{
       yapilacaklar:[]
