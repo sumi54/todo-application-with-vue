@@ -1,22 +1,22 @@
 {
-    "yapilacaklar":[
-        {
-            "id":1,
-            "baslik":"Kitap Oku",
-            "icerik":"Harry Potter kitabından 30 sayfa oku",
-            "yapildi":true
-        },
-        {
-            "id":2,
-            "baslik":"Dizi İzle",
-            "icerik":"TWD 4.sezon 16.bölüm",
-            "yapildi":false
-        },
-        {
-            "id":3,
-            "baslik":"Alışveriş yap",
-            "icerik":"Sebze ve meyve al",
-            "yapildi":false
-        }
-    ]
+  "yapilacaklar": [
+    {
+      "id": 1,
+      "baslik": "Kitap Oku",
+      "icerik": "Dostoyevski Budala 400.sayfadan okumaya devam et",
+      "yapildi": false
+    },
+    {
+      "id": 2,
+      "baslik": "Dizi İzle",
+      "icerik": "TWD 4.sezon 16.bölüm",
+      "yapildi": false
+    },
+    {
+      "id": 3,
+      "baslik": "Alışveriş yap",
+      "icerik": "Sebze ve meyve al",
+      "yapildi": false
+    }
+  ]
 }

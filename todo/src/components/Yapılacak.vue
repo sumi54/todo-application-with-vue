@@ -1,16 +1,16 @@
 
 <template>
-    <div class="yapilacak">
-        <div @click="detayGoster=!detayGoster" class="baslik">
-            <h3>{{ yapilacak.baslik }}</h3>
+    <div class="yapilacak" :class="{'yapildi':yapilacak.yapildi}">
+        <div class="baslik">
+            <h3 @click="detayGoster=!detayGoster" >{{ yapilacak.baslik }}</h3>
             <div class="icon">
                 <!-- <i class="fa-solid fa-check" style="color: #eceff4;"></i> -->
                 <!-- <i class="fa fa-search" aria-hidden="true"></i>
                 <i class="fa-solid fa-delete-left" aria-hidden="true"></i> -->
                 <div class="icons">
                  <img src="../icons/check-lg.svg" alt="check" class="material-icons">   
-                 <img src="../icons/trash-fill.svg" alt="check" class="material-icons">   
-                 <img src="../icons/pencil-fill.svg" alt="check" class="material-icons">   
+                 <img src="../icons/trash-fill.svg" alt="check" class="material-icons" @click="yapilacakSil">   
+                 <img src="../icons/pencil-fill.svg" alt="check" class="material-icons" @click="toggle" tick>  
                 </div>
                 
             </div>
@@ -26,7 +26,24 @@ export default{
     props:['yapilacak'],
     data(){
         return{
-            detayGoster:false
+            detayGoster:false,
+            uri:'http://localhost:3000/yapilacaklar/'+this.yapilacak.id
+        }
+    },
+    methods:{
+        yapilacakSil(){ //yapilacak dizi içinde siliyor
+            fetch(this.uri,{method:'DELETE'})
+            .then(()=>this.$emit('sil',this.yapilacak.id))
+            .catch((err)=>console.log(err))
+        },
+        toggle(){
+            fetch(this.uri,{
+                method:'PATCH',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({yapildi:!this.yapilacak.yapildi})
+            }).then(()=>{
+                this.$emit('yapildi',this.yapilacak.id)
+            }).catch((err)=>console.log(err))
         }
     }
 }

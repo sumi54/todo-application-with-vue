@@ -2,7 +2,7 @@
   <div class="home">
     <div v-if="yapilacaklar.length">
       <div v-for="yap in yapilacaklar" :key="yap.id">
-        <yapilacak :yapilacak="yap"/>
+        <yapilacak :yapilacak="yap" @sil="silHandle" @yapildi="yapildiHandle"/>
         </div>
     </div>
     <div v-else>
@@ -27,6 +27,17 @@ export default{
     .then((res)=>res.json())
     .then((data)=>this.yapilacaklar=data)
     .catch((err)=>console.log(err))
+  },
+  methods:{
+    silHandle(id){ //db.json içinden siliyor
+      this.yapilacaklar=this.yapilacaklar.filter(yap=> yap.id != id)
+    },
+    yapildiHandle(id){
+      let yap=this.yapilacaklar.find(yapilacak=>{
+        return yapilacak.id==id
+      })
+      yap.yapildi=!yap.yapildi
+    }
   }
 }
 </script>
