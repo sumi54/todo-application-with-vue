@@ -6,6 +6,10 @@
 </template>
 
 <style scoped>
+.main-nav{
+  display: flex;
+  justify-content: space-evenly;
+}
 .item {
   margin-top: 2rem;
   display: flex;

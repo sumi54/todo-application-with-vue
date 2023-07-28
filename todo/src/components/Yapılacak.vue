@@ -8,7 +8,7 @@
                 <!-- <i class="fa fa-search" aria-hidden="true"></i>
                 <i class="fa-solid fa-delete-left" aria-hidden="true"></i> -->
                 <div class="icons">
-                 <img src="../icons/check-lg.svg" alt="check" class="material-icons" >   
+                 <img src="../icons/check-lg.svg" alt="check" class="material-icons" @click="toggle">   
                  <img src="../icons/trash-fill.svg" alt="check" class="material-icons" @click="yapilacakSil">   
                   
                  <router-link :to="{name:'YapilacakGuncelle',params:{id:yapilacak.id}}">

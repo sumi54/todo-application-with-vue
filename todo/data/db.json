@@ -4,7 +4,7 @@
       "id": 1,
       "baslik": "Kitap Oku",
       "icerik": "Dostoyevski Budala 400.sayfadan okumaya devam et",
-      "yapildi": false
+      "yapildi": true
     },
     {
       "id": 2,
@@ -16,12 +16,6 @@
       "id": 3,
       "baslik": "Alışveriş yap",
       "icerik": "Sebze ve meyve al",
-      "yapildi": false
-    },
-    {
-      "id": 38460,
-      "baslik": "güncellendi",
-      "icerik": "bir şey",
       "yapildi": false
     }
   ]
