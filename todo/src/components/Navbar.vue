@@ -1,5 +1,8 @@
 <template>
-
+<nav class="main-nav">
+  <router-link :to="{name:'Home'}">Yapılacaklar</router-link>
+  <router-link :to="{name:'YapilacakEkle'}">Yapılacak Ekle</router-link>
+</nav>
 </template>
 
 <style scoped>
