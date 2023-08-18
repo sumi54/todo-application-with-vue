@@ -22,7 +22,5 @@ const router = createRouter({
       props:true
     }
   ]
-  
 })
-
 export default router

@@ -4,9 +4,6 @@
         <div class="baslik">
             <h3 @click="detayGoster=!detayGoster" >{{ yapilacak.baslik }}</h3>
             <div class="icon">
-                <!-- <i class="fa-solid fa-check" style="color: #eceff4;"></i> -->
-                <!-- <i class="fa fa-search" aria-hidden="true"></i>
-                <i class="fa-solid fa-delete-left" aria-hidden="true"></i> -->
                 <div class="icons">
                  <img src="../icons/check-lg.svg" alt="check" class="material-icons" @click="toggle">   
                  <img src="../icons/trash-fill.svg" alt="check" class="material-icons" @click="yapilacakSil">   
@@ -22,7 +19,6 @@
             <p>{{ yapilacak.icerik }}</p>
         </div>
     </div>
-
 </template>
 <script>
 export default{

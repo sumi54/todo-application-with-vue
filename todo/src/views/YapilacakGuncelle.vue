@@ -9,7 +9,6 @@
             <button>Güncelle</button>
         </form>  
     </div>
-    
 </template>
 <script>
 export default{
